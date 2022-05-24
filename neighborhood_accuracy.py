@@ -1,5 +1,6 @@
 from collections import defaultdict
 from scipy import stats
+import numpy as np
 
 '''
  Function that returns the critical neighborhoods, suitable prediction-based algorithms
