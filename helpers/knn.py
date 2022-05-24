@@ -3,23 +3,26 @@
 '''
 from collections import defaultdict
 
-def get_knn(ratings, algo, k=10):
+def get_knn(data, clustering_algorithms, nbhd_size=10):
 
-    neighbors = defaultdict(list)
+    nbhd_clusters = dict()
 
-    # retrieve all users in the dataset and use set() to remove duplicates
-    raw_user_ids = set(ratings.user_id.to_list())
+    # retrieve all unique users in the dataset
+    raw_user_ids = set(data.user_id.to_list())
 
-    for uid in raw_user_ids:
+    for index, algo_nbhd in enumerate(clustering_algorithms):
+      nbhds = defaultdict(list)
 
+      for uid in raw_user_ids:
         # Retrieve inner id of the user
-        user_inner_id = algo.trainset.to_inner_uid(uid)
+        user_inner_id = algo_nbhd.trainset.to_inner_uid(uid)
         # Retrieve inner ids of the nearest neighbors of the user.
-        user_neighbors = algo.get_neighbors(user_inner_id, k=k)
+        user_neighbors = algo_nbhd.get_neighbors(user_inner_id, k=nbhd_size)
         # Convert inner ids of the neighbors raw-ids.
-        user_neighbors = (algo.trainset.to_raw_uid(inner_id) 
+        user_neighbors = (algo_nbhd.trainset.to_raw_uid(inner_id) 
                             for inner_id in user_neighbors)
+        nbhds[uid] = list(user_neighbors)
 
-        neighbors[uid] = list(user_neighbors)
-
-    return neighbors
+      nbhd_clusters[index] = nbhds
+    
+    return nbhd_clusters
