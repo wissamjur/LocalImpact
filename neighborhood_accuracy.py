@@ -1,14 +1,14 @@
-from collections import defaultdict
-from scipy import stats
 import numpy as np
+from scipy import stats
+from math import log2, sqrt
+from collections import defaultdict
 
 '''
  Function that returns the critical neighborhoods, suitable prediction-based algorithms
 '''
-def critical_nbhds_accuracy(neighborhoods, predictions_df):
+def critical_nbhds_accuracy(neighborhoods, predictions_df, p_thresh=0.5):
   critical_nbhds_test_1 = defaultdict(list) # mse positive
   critical_nbhds_test_2 = defaultdict(list) # Whelch's t-test
-  p_thresh = 0.5 # p-threshold for the t-test, ref: https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_ind.html
 
   for uid, nbhd in list(neighborhoods.items()):
     # get N and D'
