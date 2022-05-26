@@ -1,0 +1,63 @@
+# ml-latest-small
+MAE:  0.6672
+RMSE: 0.8716
+MSE: 0.7597
+Clustering method used: PCC
+total nbhds - test1: 407
+total nbhds - test2: 76
+total nbhds - test3 - MSE: 54
+total nbhds - test3 - MAE: 60
+total nbhds - test3 - RMSE: 54
+Critical nbhd % 12.46
+
+
+# ml-1m
+MAE:  0.6844
+RMSE: 0.8710
+MSE: 0.7586
+Clustering method used: PCC
+total nbhds - test1: 4770
+total nbhds - test2: 1032
+total nbhds - test3 - MSE: 877
+total nbhds - test3 - MAE: 890
+total nbhds - test3 - RMSE: 877
+Critical nbhd % 17.09
+
+
+# Personality:
+MAE:  0.5852
+RMSE: 0.7775
+MSE: 0.6045
+Clustering method used: PCC
+total nbhds - test1: 1325
+total nbhds - test2: 56
+total nbhds - test3 - MSE: 45
+total nbhds - test3 - MAE: 45
+total nbhds - test3 - RMSE: 45
+Critical nbhd % 3.08
+
+
+# ml-latest-v1:
+MAE:  0.6463
+RMSE: 0.8482
+MSE: 0.7194
+Clustering method used: PCC
+total nbhds - test1: 7081
+total nbhds - test2: 1762
+total nbhds - test3 - MSE: 1144
+total nbhds - test3 - MAE: 1260
+total nbhds - test3 - RMSE: 1144
+Critical nbhd % 14.74
+
+
+# ml-latest-v2:
+MAE:  0.6401
+RMSE: 0.8397
+MSE: 0.7050
+Clustering method used: PCC
+total nbhds - test1: 8957
+total nbhds - test2: 2181
+total nbhds - test3 - MSE: 1458
+total nbhds - test3 - MAE: 1530
+total nbhds - test3 - RMSE: 1458
+Critical nbhd % 13.67
