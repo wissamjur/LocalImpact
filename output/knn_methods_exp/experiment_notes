@@ -1,0 +1,84 @@
+## ml-latest-small
+# MSD
+total nbhds - test1: 296
+total nbhds - RMSE: 30
+Critical nbhds % (out of total nbhds): 4.92
+# COS
+total nbhds - test1: 485
+total nbhds - RMSE: 91
+Critical nbhds % (out of total nbhds): 14.92
+# Pearson
+total nbhds - test1: 415
+total nbhds - RMSE: 63
+Critical nbhds % (out of total nbhds): 10.33
+# Pearson Baseline
+total nbhds - test1: 194
+total nbhds - RMSE: 7
+Critical nbhds % (out of total nbhds): 1.15
+
+## personality
+# MSD
+total nbhds - test1: 767
+total nbhds - test2: 7
+total nbhds - RMSE: 7
+Critical nbhds % (out of total nbhds): 0.38
+# COS
+total nbhds - test1: 1289
+total nbhds - test2: 89
+total nbhds - RMSE: 89
+Critical nbhds % (out of total nbhds): 4.89
+# Pearson
+total nbhds - test1: 1291
+total nbhds - test2: 50
+total nbhds - RMSE: 50
+Critical nbhds % (out of total nbhds): 2.75
+# Pearson Baseline
+total nbhds - test1: 680
+total nbhds - test2: 32
+total nbhds - RMSE: 32
+Critical nbhds % (out of total nbhds): 1.76
+
+## ml-1m
+# MSD
+total nbhds - test1: 4211
+total nbhds - test2: 776
+total nbhds - RMSE: 776
+Critical nbhds % (out of total nbhds): 12.85
+# COS
+total nbhds - test1: 4738
+total nbhds - test2: 948
+total nbhds - RMSE: 948
+Critical nbhds % (out of total nbhds): 15.7
+# Pearson
+total nbhds - test1: 4744
+total nbhds - test2: 860
+total nbhds - RMSE: 860
+Critical nbhds % (out of total nbhds): 14.24
+# Pearson Baseline
+total nbhds - test1: 1944
+total nbhds - test2: 89
+total nbhds - RMSE: 89
+Critical nbhds % (out of total nbhds): 1.47
+
+## ml-latest
+# MSD
+total nbhds - test1: 7240
+total nbhds - test2: 1422
+total nbhds - RMSE: 1422
+Critical nbhds % (out of total nbhds): 8.91
+# COS
+total nbhds - test1: 6049
+total nbhds - test2: 999
+total nbhds - RMSE: 999
+Critical nbhds % (out of total nbhds): 6.27
+# Pearson
+total nbhds - test1: 9576
+total nbhds - test2: 1569
+total nbhds - RMSE: 1569
+Critical nbhds % (out of total nbhds): 9.84
+
+# Pearson Baseline
+total nbhds - test1: 6026
+total nbhds - test2: 509
+total nbhds - RMSE: 509
+Critical nbhds % (out of total nbhds): 3.19

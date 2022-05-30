@@ -3,8 +3,8 @@
 '''
 from collections import defaultdict
 
-def get_knn(data, clustering_algorithm, nbhd_size=10):
 
+def get_knn(data, clustering_algorithm, nbhd_size=10):
     # retrieve all unique users in the dataset
     raw_user_ids = set(data.user_id.to_list())
 
@@ -16,8 +16,7 @@ def get_knn(data, clustering_algorithm, nbhd_size=10):
         # Retrieve inner ids of the nearest neighbors of the user.
         user_neighbors = clustering_algorithm.get_neighbors(user_inner_id, k=nbhd_size)
         # Convert inner ids of the neighbors raw-ids.
-        user_neighbors = (clustering_algorithm.trainset.to_raw_uid(inner_id) 
-                            for inner_id in user_neighbors)
+        user_neighbors = (clustering_algorithm.trainset.to_raw_uid(inner_id) for inner_id in user_neighbors)
         nbhds[uid] = list(user_neighbors)
 
     return nbhds
