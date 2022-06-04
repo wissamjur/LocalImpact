@@ -14,6 +14,9 @@ def critical_nbhds_accuracy(neighborhoods, predictions_df, p_thresh=0.5):
     for uid, nbhd in list(neighborhoods.items()):
         # get N and D'
         pred_nbhd = predictions_df[predictions_df['uid'].isin(nbhd)]
+        prec_uid = predictions_df[predictions_df['uid'] == uid]
+        pred_nbhd = pd.concat([prec_uid, pred_nbhd])
+
         pred_nbhd_equiv = predictions_df[~(predictions_df['uid'].isin(nbhd))]
 
         # calculate the overall loss per neighborhood
@@ -52,7 +55,7 @@ def critical_nbhds_accuracy(neighborhoods, predictions_df, p_thresh=0.5):
                 rmse_subset_equiv = sqrt(np.mean((y_true_equiv - y_pred_equiv)**2))
 
                 critical_nbhds_test_2[uid] = (
-                    (nbhd, len(pred_nbhd), len(pred_nbhd_equiv),
+                    (uid, nbhd, len(pred_nbhd), len(pred_nbhd_equiv),
                     mse_subset, mse_subset_equiv,
                     mae_subset, mae_subset_equiv,
                     rmse_subset, rmse_subset_equiv))
@@ -60,15 +63,16 @@ def critical_nbhds_accuracy(neighborhoods, predictions_df, p_thresh=0.5):
     # convert critical_nbhds after test2 to a df and return the result
     critical_nbhds_final_df = pd.DataFrame(critical_nbhds_test_2).T.rename(
         {
-            0: 'nbhd',
-            1: 'nbhd_size',
-            2: 'equiv_size',
-            3: 'mse_nbhd',
-            4: 'mse_equiv',
-            5: 'mae_nbhd',
-            6: 'mae_equiv',
-            7: 'rmse_nbhd',
-            8: 'rmse_equiv'
+            0: 'uid',
+            1: 'nbhd',
+            2: 'nbhd_size',
+            3: 'equiv_size',
+            4: 'mse_nbhd',
+            5: 'mse_equiv',
+            6: 'mae_nbhd',
+            7: 'mae_equiv',
+            8: 'rmse_nbhd',
+            9: 'rmse_equiv'
         }, axis=1).reset_index(drop=True)
     critical_nbhd_stats(critical_nbhds_test_1, critical_nbhds_final_df, neighborhoods)
 

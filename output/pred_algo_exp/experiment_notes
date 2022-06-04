@@ -1,0 +1,56 @@
+## ml-latest-small
+# SVD
+total nbhds - test1: 366
+total nbhds - RMSE: 42
+Critical nbhds % (out of total nbhds): 6.89
+# SlopeOne
+total nbhds - test1: 387
+total nbhds - RMSE: 51
+Critical nbhds % (out of total nbhds): 8.36
+# NMF
+total nbhds - test1: 392
+total nbhds - test2: 65
+total nbhds - RMSE: 65
+Critical nbhds % (out of total nbhds): 10.66
+
+## ml-1m
+# SVD
+total nbhds - test1: 4357
+total nbhds - RMSE: 718
+Critical nbhds % (out of total nbhds): 11.89
+# SlopeOne
+total nbhds - test1: 3796
+total nbhds - RMSE: 679
+Critical nbhds % (out of total nbhds): 11.24
+# NMF
+total nbhds - test1: 4287
+total nbhds - RMSE: 750
+Critical nbhds % (out of total nbhds): 12.42
+
+# ml-latest
+# SVD
+total nbhds - test1: 8838
+total nbhds - RMSE: 1786
+Critical nbhds % (out of total nbhds): 11.2
+# SlopeOne
+total nbhds - test1: 7653
+total nbhds - RMSE: 952
+Critical nbhds % (out of total nbhds): 5.97
+# NMF
+total nbhds - test1: 8825
+total nbhds - RMSE: 1687
+Critical nbhds % (out of total nbhds): 10.58
+
+# personality
+# SVD
+total nbhds - test1: 1101
+total nbhds - RMSE: 58
+Critical nbhds % (out of total nbhds): 3.19
+# SlopeOne
+total nbhds - test1: 1135
+total nbhds - RMSE: 62
+Critical nbhds % (out of total nbhds): 3.41
+# NMF
+total nbhds - test1: 1082
+total nbhds - RMSE: 50
+Critical nbhds % (out of total nbhds): 2.75

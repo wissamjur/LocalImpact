@@ -50,7 +50,7 @@ def get_critical_nbhds(neighborhoods, predictions_df, precisions_df, recalls_df,
             f1_equiv = (2 * prec_equiv_value * recall_equiv_value) / (prec_equiv_value + recall_equiv_value)
 
             critical_nbhds_test_2[uid] = (
-                (nbhd, len(pred_nbhd), len(pred_equiv),
+                (uid, nbhd, len(pred_nbhd), len(pred_equiv),
                 prec_n_value, prec_equiv_value,
                 recall_n_value, recall_equiv_value,
                 f1_n, f1_equiv))
@@ -58,15 +58,16 @@ def get_critical_nbhds(neighborhoods, predictions_df, precisions_df, recalls_df,
     # convert critical_nbhds after test2 to a df and return the result
     critical_nbhds_final_df = pd.DataFrame(critical_nbhds_test_2).T.rename(
         {
-            0: 'nbhd',
-            1: 'nbhd_size',
-            2: 'equiv_size',
-            3: 'precision_nbhd',
-            4: 'precision_equiv',
-            5: 'recall_nbhd',
-            6: 'recall_equiv',
-            7: 'f1_nbhd',
-            8: 'f1_equiv'
+            0: 'uid',
+            1: 'nbhd',
+            2: 'nbhd_size',
+            3: 'equiv_size',
+            4: 'precision_nbhd',
+            5: 'precision_equiv',
+            6: 'recall_nbhd',
+            7: 'recall_equiv',
+            8: 'f1_nbhd',
+            9: 'f1_equiv'
         }, axis=1).reset_index(drop=True)
 
     print('Percentage of critical neighborhoods:', round(len(critical_nbhds_final_df) / len(neighborhoods) * 100, 2))
