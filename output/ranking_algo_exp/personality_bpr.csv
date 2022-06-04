@@ -1,0 +1,2 @@
+uid,nbhd,nbhd_size,equiv_size,precision_nbhd,precision_equiv,recall_nbhd,recall_equiv,f1_nbhd,f1_equiv
+5,"[14, 17, 8, 2, 7, 3, 11, 4, 18, 0]",2614,2793,0.47272727272727283,0.2,0.03470202978823668,0.016092314118629908,0.06465766095324106,0.029787850964094136
