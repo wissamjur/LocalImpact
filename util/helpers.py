@@ -51,7 +51,7 @@ def load_dataset_explicit(ds_name, ds_path, total_users=10000):
         ratings_small = ratings[ratings.user_id.isin(target_users)]
         ratings = ratings_small
 
-    elif ds_name == 'personality':
+    elif ds_name == 'personality-isf2018':
         ratings = pd.read_csv(ratings_path)\
             .rename({' movie_id': 'item_id', 'useri': 'user_id', ' rating': 'rating'}, axis=1)
         ratings["user_id"] = ratings["user_id"].astype('category')
